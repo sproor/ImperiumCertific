@@ -1,0 +1,706 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// intro
+//
+///////////////////////////////////////////////////////////////////////////
+
+.intro {
+    width: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+
+        border-bottom: 5px solid #419AAB;
+        filter: drop-shadow(0px 0px 26px rgba(0, 0, 0, 0.25));
+    }
+
+    .intro-info {
+        position: absolute; /* Позиционируем нижний блок абсолютно */
+        bottom: 15px; /* Размещаем нижний блок внизу */
+        left: 50%; /* Размещаем нижний блок по центру */
+        transform: translateX(-50%); /* Сдвигаем блок на половину его ширины влево */
+        z-index: 1;
+
+        h1 {
+            font-weight: 900;
+            font-size: 176px;
+            line-height: 215px;
+            color: rgba(255, 255, 255, 0.85);
+            text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// info
+//
+///////////////////////////////////////////////////////////////////////////
+
+.info {
+    width: 100%;
+    min-height: 150px;
+    margin-top: 20px;
+    position: relative;
+
+    &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 50%; /* переместите элемент на 50% от верхнего края родительского элемента */
+        left: 50%; /* переместите элемент на 50% от левого края родительского элемента */
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(262.78deg, #ECECEC 0.87%, #BCC1C1 17.85%);
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        margin: 0px 50px;
+
+        .wrapp-img {
+            position: relative;
+
+            img {
+
+            }
+
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+                color: #E1E1E1;
+                width: 110px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .wrapp-text {
+            width: 80%;
+            margin-left: 20px;
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                display: flex;
+                align-items: center;
+
+                color: #FFFFFF;
+
+                text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// types
+//
+///////////////////////////////////////////////////////////////////////////
+
+.types {
+    margin: 0 50px;
+    margin-top: 50px;
+
+    .title {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 44px;
+        color: #124651;
+    }
+
+    .content {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        .item {
+            border: 1px solid #fff;
+            width: 32%;
+            max-width: 550px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            img {
+                max-height: 220px;
+                object-fit: cover;
+            }
+
+            .item-inside {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 54, 41, 0.6);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                transition: 0.7s all;
+
+                &:hover {
+                    a.ref {
+                        opacity: 1;
+                    }
+
+                    background-color: rgba(0, 54, 41, 0.2);
+                }
+
+                h4.title {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 44px;
+                    color: #F5F5F5;
+                    margin-left: 25px;
+                    margin-bottom: 20px;
+                    width: 370px;
+                }
+
+                p.description {
+                    margin-left: 25px;
+                    font-family: 'Philosopher', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #F5F5F5;
+                    margin-bottom: 25px;
+                    width: 370px;
+                }
+
+                a.ref {
+                    opacity: 0;
+                    cursor: pointer;
+                    margin-left: 25px;
+                    border: 1px solid #00FFBF;
+                    padding: 10px 37px;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #F5F5F5;
+                    transition: 0.5s all;
+
+                    &:hover {
+                        background-color: rgba(0, 54, 41, 0.5);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// process
+//
+///////////////////////////////////////////////////////////////////////////
+
+.process {
+    width: 100%;
+    margin-top: 85px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 auto;
+        margin-left: 50px;
+
+        h3.title {
+            width: 35%;
+            max-width: 435px;
+            border-right: 1px solid rgba(114, 114, 114, 1);
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 44px;
+            color: #124651;
+        }
+
+        p.description {
+            width: 65%;
+            max-width: 1200px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #414141;
+            margin-left: 20px;
+        }
+    }
+
+    .steps {
+        margin-top: 15px;
+        width: 100%;
+        height: 600px;
+        background-image: url("/public/assets/certificate/process/bg.jpg");
+        background-size: cover;
+        object-fit: cover;
+        display: flex;
+
+
+        .step {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            transition: 0.2s all;
+
+            .content {
+                margin-bottom: 52px;
+                margin-left: 52px;
+                margin-right: 30px;
+            }
+
+            .number {
+                .circle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: rgba(0, 255, 191, 0.66);
+                    font-family: 'Philosopher', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 27px;
+                    color: #FFFFFF;
+                }
+            }
+
+            h4.title {
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 29px;
+                color: #FFFFFF;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                max-width: 270px;
+            }
+
+            p.description {
+                display: none;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                color: #FFFFFF;
+                margin-bottom: 15px;
+                transition: 0.4s all;
+                text-align: left;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.24);
+                backdrop-filter: blur(15.5px);
+                border-top: 3px solid #00FFBF;
+
+                p.description {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// advantages
+//
+///////////////////////////////////////////////////////////////////////////
+
+.advantages {
+    margin-top: 85px;
+
+    .content {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            border-right: 1px solid rgba(114, 114, 114, 1);
+            padding-right: 20px;
+
+            h3.title {
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 44px;
+                color: #124651;
+                margin-bottom: 20px;
+            }
+
+            p.text {
+                font-family: 'Philosopher', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+                color: #414141;
+            }
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            width: 60%;
+
+            .col-left {
+                width: 50%;
+            }
+
+            .col-right {
+                width: 50%;
+            }
+
+            .item {
+                ul {
+                    list-style: none;
+                }
+
+                li {
+                    position: relative;
+                    padding-left: 70px; /* ширина маркера + отступ слева */
+                    line-height: 1.5; /* расстояние между строками */
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                li:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 60px; /* ширина маркера */
+                    height: 60px; /* высота маркера */
+                    background-image: url("/public/assets/certificate/advantages/li.svg"); /* путь к картинке маркера */
+                    background-size: cover; /* масштабирование картинки маркера */
+                }
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Custom data
+//
+///////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+//
+// general
+//
+///////////////////////////////////////////////////////////////////////////
+.custom {
+    font-family: 'Philosopher', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: justify;
+    b{
+        font-weight: 700;
+    }
+    h3.title-block {
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 44px;
+        color: #124651;
+    }
+
+    h4 {
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 37px;
+        color: #414141;
+    }
+
+    p.mini-description {
+        font-family: 'Philosopher', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #414141;
+        max-width: 700px;
+    }
+
+    .header {
+        padding:  0px 50px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin-bottom: 25px;
+
+        .vert-line {
+            margin: 0px 10px;
+            height: 45px;
+            border-left: 1px solid #727272;
+        }
+        p.mini-description {
+            max-width: 50%;
+        }
+        h3.title-block {
+            max-width: 49%;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-top: 30px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        flex-basis: 40%;
+        position: relative;
+        padding-left: 70px; /* ширина маркера + отступ слева */
+        line-height: 1.5; /* расстояние между строками */
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px; /* ширина маркера */
+        height: 60px; /* высота маркера */
+        background-size: cover; /* масштабирование картинки маркера */
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// info-block
+//
+///////////////////////////////////////////////////////////////////////////
+.info-block {
+    width: 70%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: radial-gradient(100% 363.32% at 0% 50.13%, #43776B 0%, #1C5F57 20.97%, #075F59 38.26%, #5AAD9A 100%);
+    box-shadow: 0px 20px 10px -7px rgba(120, 175, 168, 0.75);
+
+    .content {
+        margin: 35px 10px 35px 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .text {
+            p {
+                font-family: 'Philosopher', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #FFFFFF;
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+
+        }
+
+        .sign {
+            font-family: 'Philosopher', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 212px;
+            line-height: 237px;
+            color: rgba(255, 255, 255, 0.34);
+        }
+    }
+}
+/////////////////////////////////////////////////////////////////////////////
+//
+// need
+//
+///////////////////////////////////////////////////////////////////////////
+.need {
+    margin-top: 70px;
+    .content {
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+            font-family: 'Philosopher', serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 27px;
+            color: #414141;
+
+            &:before {
+                background-image: url("/public/assets/certificate/advantages/li.svg"); /* путь к картинке маркера */
+            }
+        }
+    }
+}
+/////////////////////////////////////////////////////////////////////////////
+//
+// goals
+//
+///////////////////////////////////////////////////////////////////////////
+.goals {
+    margin-top: 70px;
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        ul{
+            justify-content: center;
+        }
+        li {
+            width: 240px; /* задаем ширину квадрата */
+            height: 190px; /* задаем высоту квадрата */
+            border-bottom: 2px solid #419AAB; /* добавляем рамку, чтобы лучше видеть размеры */
+            text-align: center; /* центрируем текст внутри квадрата */
+            display: flex; /* используем flexbox для выравнивания по центру */
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #91AAAA 0%, #9BB1B1 23.96%, #A8BFBF 39.06%, #D6E6E6 100%);
+            flex-basis: auto;
+            padding: 0;
+            position: relative;
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 22px;
+            color: #414141;
+            z-index: 2;
+            span{
+                z-index: -1;
+                position: absolute;
+                bottom: -45px;
+                left: 0;
+                font-family: 'Philosopher', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 209px;
+                line-height: 234px;
+
+                color: rgba(255, 255, 255, 0.41);
+
+            }
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+
+}
+/////////////////////////////////////////////////////////////////////////////
+//
+// custom-advantages
+//
+///////////////////////////////////////////////////////////////////////////
+.custom-advantages{
+    margin-top: 80px;
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        ul {
+            margin-left: 10px;
+            counter-reset: li; /* сбросить счетчик для элементов списка */
+            list-style: none; /* убрать стандартную нумерацию */
+        }
+        li{
+            flex-basis: 100%;
+        }
+        li:before {
+            color: #FFFFFF;
+            padding: 10px;
+            padding-bottom: 15px;
+            padding-left: 12px;
+            background-image: url("/public/assets/ellipse.svg"); /* путь к картинке маркера */
+            content: counter(li); /* вставить значение счетчика */
+            counter-increment: li; /* увеличить счетчик */
+            display: inline-block; /* установить тип отображения псевдоэлемента */
+            width: 40px; /* ширина кружка */
+            height: 40px; /* высота кружка */
+            line-height: 40px; /* выровнять номер по центру кружка */
+            text-align: center; /* выровнять текст по центру кружка */
+            border-radius: 50%; /* сделать кружок */
+            margin-right: 10px; /* отступ между номером и текстом */
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// history
+//
+///////////////////////////////////////////////////////////////////////////
+.history{
+    margin-top: 80px;
+
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        ul {
+            margin-left: 10px;
+            counter-reset: li; /* сбросить счетчик для элементов списка */
+            list-style: none; /* убрать стандартную нумерацию */
+        }
+        li{
+            flex-basis: 100%;
+        }
+        li:before {
+            color: #FFFFFF;
+            padding: 15px;
+            padding-bottom: 5px;
+            background-image: url("/public/assets/ellipse.svg"); /* путь к картинке маркера */
+            display: inline-block; /* установить тип отображения псевдоэлемента */
+            width: 20px; /* ширина кружка */
+            height: 20px; /* высота кружка */
+            line-height: 40px; /* выровнять номер по центру кружка */
+            text-align: center; /* выровнять текст по центру кружка */
+            border-radius: 50%; /* сделать кружок */
+            margin-right: 10px; /* отступ между номером и текстом */
+        }
+    }
+    margin-bottom: 120px;
+}
